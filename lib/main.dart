@@ -1,5 +1,6 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tmuf_kb_helper/data.dart';
 import 'package:tmuf_kb_helper/filesystem.dart';
@@ -23,6 +24,7 @@ void main() async {
   await Data.init();
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
+  await Window.initialize();
   runApp(const MyApp());
   doWhenWindowReady(() {
     appWindow.title = "TMUF KB Helper";
@@ -36,7 +38,7 @@ void main() async {
 
 ThemeData? getThemeData(BuildContext context) => ThemeData.dark().copyWith(
   scaffoldBackgroundColor: bgColor,
-  backgroundColor: bgColor,
+  backgroundColor: Colors.transparent,
   textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: textColor),
   canvasColor: bgColor,
   primaryColor: primaryColor,

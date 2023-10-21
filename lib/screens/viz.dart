@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:tmuf_kb_helper/components/appbar.dart';
 import 'package:tmuf_kb_helper/data.dart';
 import 'package:tmuf_kb_helper/globals.dart';
@@ -12,7 +13,11 @@ class VizScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     windowManager.setSize(visSize);
     windowManager.setResizable(true);
+    Window.setEffect(
+      effect: WindowEffect.transparent
+    );
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: Column(
         children: const [
           CustomAppBar(),

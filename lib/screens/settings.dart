@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:tmuf_kb_helper/components/appbar.dart';
 import 'package:tmuf_kb_helper/data.dart';
 import 'package:tmuf_kb_helper/globals.dart';
@@ -12,6 +13,9 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     windowManager.setSize(settingsSize);
     windowManager.setResizable(false);
+    Window.setEffect(
+      effect: WindowEffect.disabled
+    );
     return Scaffold(
       body: Column(
         children: const [
