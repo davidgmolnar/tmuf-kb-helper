@@ -27,7 +27,3 @@ Belgian, Czech, Dutch, English, Estonian, Finnish, French, German, Greek, Hungar
 I used keyboard event names from this site: https://kbdlayout.info/ If your keyboard has the same key events as one of the above it should also work for you. **Either way if it doesnt, please make an issue, where you include the following**:
 - your country
 - the keys that dont work for you
-
-## Future plans
-
-I plan to add two additional keys for respawning and retiring. This way I can add an other tab to show splits.
